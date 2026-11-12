@@ -1,0 +1,455 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shime Absetillas | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #120d1f;
+            color: white;
+        }
+
+        /* NAVIGATION */
+        header {
+            background: #1d1530;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #e9a6ff;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: #e9a6ff;
+        }
+
+        /* HOME */
+        .home {
+            min-height: 90vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 10%;
+            gap: 40px;
+        }
+
+        .home-content h3 {
+            color: #e9a6ff;
+            font-size: 24px;
+        }
+
+        .home-content h1 {
+            font-size: 55px;
+            margin: 15px 0;
+        }
+
+        .home-content h1 span {
+            color: #e9a6ff;
+        }
+
+        .home-content p {
+            color: #c9bfd8;
+            line-height: 1.8;
+            max-width: 550px;
+        }
+
+        .home-content button {
+            margin-top: 25px;
+            padding: 13px 25px;
+            background: #e9a6ff;
+            color: #120d1f;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .home-content button:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+        .profile {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e9a6ff, #8b5cf6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 85px;
+            font-weight: bold;
+            color: #120d1f;
+            border: 7px solid #34234b;
+            box-shadow: 0 0 35px rgba(233,166,255,.2);
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 35px;
+            color: #e9a6ff;
+            margin-bottom: 40px;
+        }
+
+        /* ABOUT */
+        .about {
+            background: #1d1530;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            color: #c9bfd8;
+            line-height: 1.9;
+        }
+
+        /* SKILLS */
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .skill {
+            background: #281d3e;
+            padding: 20px 30px;
+            border-radius: 12px;
+            border: 1px solid #e9a6ff;
+            transition: .3s;
+        }
+
+        .skill:hover {
+            background: #e9a6ff;
+            color: #120d1f;
+            transform: translateY(-7px);
+        }
+
+        /* PROJECTS */
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #281d3e;
+            padding: 30px;
+            border-radius: 15px;
+            transition: .3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,.3);
+        }
+
+        .project-card h3 {
+            color: #e9a6ff;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: #c9bfd8;
+            line-height: 1.7;
+        }
+
+        /* EDUCATION */
+        .education {
+            background: #1d1530;
+            text-align: center;
+        }
+
+        .education-box {
+            background: #281d3e;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .education-box h3 {
+            color: #e9a6ff;
+            margin-bottom: 15px;
+        }
+
+        .education-box p {
+            color: #c9bfd8;
+            line-height: 1.8;
+        }
+
+        /* CONTACT */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 15px;
+            color: #c9bfd8;
+        }
+
+        .contact a {
+            color: #e9a6ff;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #1d1530;
+            text-align: center;
+            padding: 20px;
+            color: #c9bfd8;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0;
+            }
+
+            .home {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .home-content h1 {
+                font-size: 40px;
+            }
+
+            .profile {
+                width: 200px;
+                height: 200px;
+                font-size: 60px;
+            }
+
+            .projects-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <div class="logo">SHIME.</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HOME SECTION -->
+    <section class="home" id="home">
+
+        <div class="home-content">
+            <h3>Hello, Welcome to My Portfolio!</h3>
+
+            <h1>I'm <span>Shime</span><br>Absetillas</h1>
+
+            <p>
+                Welcome to my personal portfolio website!
+                I am a passionate and dedicated individual
+                who enjoys learning new things, exploring
+                creative ideas, and improving my skills.
+                I believe that every experience is an
+                opportunity to grow and become better.
+            </p>
+
+            <button onclick="location.href='#about'">
+                Discover More
+            </button>
+        </div>
+
+        <div class="profile">
+            SA
+        </div>
+
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <p>
+            Hi! My name is Shime Absetillas. I am a
+            motivated and hardworking individual who
+            believes in the importance of education,
+            creativity, and personal growth. I enjoy
+            discovering new things, learning from
+            experiences, and developing my abilities.
+            My goal is to continue improving myself
+            and achieve success through determination,
+            patience, and hard work.
+        </p>
+
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill">Communication</div>
+            <div class="skill">Teamwork</div>
+            <div class="skill">Creativity</div>
+            <div class="skill">Problem Solving</div>
+            <div class="skill">Time Management</div>
+            <div class="skill">Computer Skills</div>
+            <div class="skill">Adaptability</div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="projects-container">
+
+            <div class="project-card">
+                <h3>Project 01</h3>
+                <p>
+                    Add your first school project or personal
+                    activity here. Include a short explanation
+                    of what you accomplished.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Project 02</h3>
+                <p>
+                    Showcase another project, presentation,
+                    or creative work that demonstrates
+                    your knowledge and abilities.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Project 03</h3>
+                <p>
+                    Share an achievement or experience
+                    that you are proud of and describe
+                    what you learned from it.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="education" id="education">
+
+        <h2 class="section-title">My Education</h2>
+
+        <div class="education-box">
+
+            <h3>Educational Background</h3>
+
+            <p>
+                School: Your School Name
+                <br>
+                Course/Strand: Your Course or Strand
+                <br>
+                Year Level: Your Year Level
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+
+        <h2 class="section-title">Contact Me</h2>
+
+        <p>
+            Thank you for visiting my portfolio!
+            Feel free to connect with me.
+        </p>
+
+        <p>
+            Email:
+            <a href="mailto:your@email.com">
+                your@email.com
+            </a>
+        </p>
+
+        <p>
+            Facebook:
+            <a href="https://www.facebook.com/">
+                My Facebook Profile
+            </a>
+        </p>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Shime Absetillas | All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
